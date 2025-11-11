@@ -18,10 +18,9 @@ class Generator(nn.Module):
         #(barch_size,num_rels,dim)
         noise_embedding = np.random.normal(loc=0.0, scale=1.0, size=rel_embedding.shape)
         noise_embedding = torch.tensor(noise_embedding, dtype=torch.float32).cuda()
-        # with open('/data3/hucheng/hucheng/IJCAI_2025/src/embedding/embedding_noise'+'_Sead'+'.pkl', 'wb') as f:
-        #     pickle.dump(noise_embedding, f)
+       
         fake_rel_embedding = rel_embedding + noise_embedding
-        #fake_rel_embedding = F.leaky_relu(torch.matmul(input, self.gen_w))
+      
 
         return fake_rel_embedding
 
