@@ -108,9 +108,7 @@ class APEP(nn.Module):
         pred_clean, idx_clean, feature_clean = self.__get_pred_embeds(t_list)                            #clean graph
         pred_noise, idx_noise, feature_noise = self.__get_pred_embeds(t_list,add_graph_noise=True)       #adversarial graph
         time = t_list.item()
-        # with open('/data3/hucheng/hucheng/IJCAI_2025/src/embedding/embedding_without_gcl'+'_Sead_'+str(time)+'.pkl', 'wb') as f:
-        #     pickle.dump(feature_clean, f)
-        #adversarial loss
+       
         fake_feature = self.generator(feature_noise)                                                     #adversiarial embedding
         discriminator_loss = self.discriminator.update(feature_clean, fake_feature)
         generator_loss = self.generator.update(self.discriminator, fake_feature)
