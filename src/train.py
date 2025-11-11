@@ -19,7 +19,7 @@ from torch.utils.data import DataLoader
 import json
  
 parser = argparse.ArgumentParser(description='')
-parser.add_argument("--dp", type=str, default="/data3/hucheng/hucheng/data/", help="data path")
+parser.add_argument("--dp", type=str, default="/data3/data/", help="data path")
 parser.add_argument("--dropout", type=float, default=0.5, help="dropout probability")
 parser.add_argument("--model", type=str, default='APEP', help="model name")
 parser.add_argument("--n-hidden", type=int, default=32, help="number of hidden units")
@@ -236,5 +236,5 @@ print("acc: {:.4f}".format(acc_avg))
 
 # save results
 result = 'Model: {}, Dataset: {}, Ratio:{:.4f}, Rec: {:.4f}, Precision: {:.4f}, F1: {:.4f}, F2: {:.4f}, Acc: {:.4f}, Loss: {:.4f}, N_layers: {}, n-hidden: {}, lr: {:.5f}, adversarial_lr: {:.5f}, seq_len: {}, use_gru:{}\n'.format(args.model, args.dataset, args.ratio, recall_avg, p_avg, f1_avg, f2_avg, acc_avg, hloss_avg, args.n_layers, args.n_hidden, args.lr, args.adversarial_lr,args.seq_len,args.use_gru)
-with open('/data3/hucheng/hucheng/IJCAI_2025/src/results.csv','a') as fd:
+with open('/data3/src/results.csv','a') as fd:
     fd.write(result)
