@@ -1,8 +1,8 @@
-# Sead
+# Semantics-Preserving Temporal Adversarial Graph Contrastive Learning for Event Prediction
 
-## Semantics-Preserving Temporal Adversarial Graph Contrastive Learning for Event Prediction
+本仓库为论文 **Semantics-Preserving Temporal Adversarial Graph Contrastive Learning for Event Prediction** 的代码实现。该论文已被 **ECML-PKDD 2026 Research Track** 录用。
 
-本仓库为论文 **Semantics-Preserving Temporal Adversarial Graph Contrastive Learning for Event Prediction** 的代码实现，主要用于动态知识图谱上的事件预测任务。代码围绕时间序列事件图建模，将历史四元组构造成按时间组织的图快照，并预测后续时间步的关系级事件分布。
+本代码主要用于动态知识图谱上的事件预测任务。代码围绕时间序列事件图建模，将历史四元组构造成按时间组织的图快照，并预测后续时间步的关系级事件分布。
 
 ## 仓库结构
 
