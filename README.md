@@ -26,27 +26,6 @@ graph aggregation, CompGCN-style message passing, and temporal encoding. The fin
 event-type representations are optimized with graph contrastive loss and event
 prediction loss.
 
-## Repository Structure
-
-```text
-Sead/
-|-- README.md
-|-- __init__.py
-`-- src/
-    |-- train.py                 # training, validation, and testing
-    |-- build_baseline.py        # argument extension and model construction
-    |-- models.py                # Sead model
-    |-- aggregators.py           # event graph aggregation modules
-    |-- propagations.py          # graph propagation modules
-    |-- Generator.py             # adversarial learning component
-    |-- Discriminator.py         # adversarial learning component
-    |-- data.py                  # dataset wrappers
-    |-- event_data_processing.py # event data preprocessing
-    |-- utils.py                 # data loading, metrics, and utilities
-    |-- modules_f.py             # attention and basic neural modules
-    `-- modules/                 # memory/cache/TGN-related modules
-```
-
 ## Usage
 
 ```bash
